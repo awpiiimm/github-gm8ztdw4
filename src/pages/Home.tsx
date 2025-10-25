@@ -235,7 +235,7 @@ function Home() {
           </p>
         </div>
       </div>
-    </div>
+    
   );
 }
 
