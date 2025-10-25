@@ -85,7 +85,7 @@ function Contact() {
         <img
           src="/logosolar.png"
           alt="Solar Music Group Logo"
-          className="w-28 sm:w-32 md:w-36 mx-auto drop-shadow-[0_0_20px_rgba(255,140,0,0.5)]"
+          className="w-50 sm:w-32 md:w-36 mx-auto drop-shadow-[0_0_20px_rgba(255,140,0,0.5)]"
         />
       </div>
 
