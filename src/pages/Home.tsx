@@ -132,61 +132,52 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Release 1 - YouTube Embed */}
             <div
-              className={`group relative backdrop-blur-sm transition-all duration-500 ${
+              className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#FFD166]/20 rounded-xl overflow-hidden hover:border-[#FFD166]/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,200,60,0.3)] ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-[#FFD166]/10 hover:border-[#FFD166]/40 transition-all duration-500 shadow-xl hover:shadow-[0_8px_30px_rgba(255,200,60,0.2)] transform hover:-translate-y-1">
-                <div className="aspect-video bg-black relative overflow-hidden">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/U_5mCpGaJ4M"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="aspect-video bg-black relative overflow-hidden">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              <div className="mt-4 px-2">
-                <h3 className="text-lg font-bold text-[#FFD166] mb-0.5 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-[#FFD166] mb-1 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
                   Midnight Dreams
                 </h3>
-                <p className="text-[#FFE29A]/70 text-sm">Luna Eclipse</p>
+                <p className="text-[#FFE29A]/80 text-sm">by Luna Eclipse</p>
               </div>
             </div>
 
             {/* Release 2 - Spotify Embed */}
             <div
-              className={`group relative backdrop-blur-sm transition-all duration-500 ${
+              className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#FFD166]/20 rounded-xl overflow-hidden hover:border-[#FFD166]/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,200,60,0.3)] ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: '150ms' }}
             >
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-[#FFD166]/10 hover:border-[#FFD166]/40 transition-all duration-500 shadow-xl hover:shadow-[0_8px_30px_rgba(255,200,60,0.2)] transform hover:-translate-y-1">
-                <div className="bg-black relative overflow-hidden flex items-center justify-center h-[152px] sm:h-[200px]">
-  <iframe
-    className="w-full h-[152px] sm:h-[200px]"
-    src="https://open.spotify.com/embed/track/5ilGy3Wgv2ZioDzVXhOV1F?utm_source=generator&theme=0"
-    frameBorder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-  ></iframe>
-</div>
-
-
-
-                </div>
+              <div className="aspect-video bg-black relative overflow-hidden flex items-center justify-center">
+                <iframe
+                  className="w-full h-full"
+                  src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
               </div>
-              <div className="mt-4 px-2">
-                <h3 className="text-lg font-bold text-[#FFD166] mb-0.5 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-[#FFD166] mb-1 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
                   City Lights
                 </h3>
-                <p className="text-[#FFE29A]/70 text-sm">Neon Wave</p>
+                <p className="text-[#FFE29A]/80 text-sm">by Neon Wave</p>
               </div>
             </div>
           </div>
@@ -235,7 +226,7 @@ function Home() {
           </p>
         </div>
       </div>
-    
+    </div>
   );
 }
 
