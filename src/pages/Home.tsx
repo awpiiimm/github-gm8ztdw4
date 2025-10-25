@@ -168,14 +168,16 @@ function Home() {
               style={{ transitionDelay: '150ms' }}
             >
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-[#FFD166]/10 hover:border-[#FFD166]/40 transition-all duration-500 shadow-xl hover:shadow-[0_8px_30px_rgba(255,200,60,0.2)] transform hover:-translate-y-1">
-                <div className="aspect-video bg-black relative overflow-hidden">
-                        <iframe
-                        className="w-full h-full"
-                        src="https://open.spotify.com/embed/track/5ilGy3Wgv2ZioDzVXhOV1F?utm_source=generator&theme=0"
-                        frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                      ></iframe>
+                <div className="bg-black relative overflow-hidden flex items-center justify-center h-[152px] sm:h-[200px]">
+  <iframe
+    className="w-full h-[152px] sm:h-[200px]"
+    src="https://open.spotify.com/embed/track/5ilGy3Wgv2ZioDzVXhOV1F?utm_source=generator&theme=0"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 
                 </div>
