@@ -142,7 +142,7 @@ function Home() {
               <div className="aspect-video bg-black relative overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src="https://www.youtube.com/embed/4IUQuB4Lv-M"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
