@@ -167,7 +167,7 @@ function Home() {
               <div className="aspect-video bg-black relative overflow-hidden flex items-center justify-center">
                 <iframe
                   className="w-full h-full"
-                  src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp"
+                  src="https://open.spotify.com/embed/track/7Kvl6OEQVWeAwaQFJwgBQ"
                   frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
