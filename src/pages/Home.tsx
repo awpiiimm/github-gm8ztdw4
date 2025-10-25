@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Youtube, Facebook, Play, ExternalLink } from 'lucide-react';
+import { Instagram, Twitter, Youtube, Facebook, ChevronDown } from 'lucide-react';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,49 +103,15 @@ function Home() {
           </Link>
         </div>
 
-          {/* Footer */}
+          {/* Scroll Indicator */}
           <div
-            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-md px-6 transition-all duration-1500 delay-300 ease-out ${
+            className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1500 delay-500 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <div className="flex items-center justify-center gap-6 mb-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FFD166]/60 hover:text-[#FFD166] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,200,60,0.8)]"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FFD166]/60 hover:text-[#FFD166] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,200,60,0.8)]"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FFD166]/60 hover:text-[#FFD166] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,200,60,0.8)]"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FFD166]/60 hover:text-[#FFD166] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,200,60,0.8)]"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
+            <div className="flex flex-col items-center gap-2">
+              <ChevronDown className="w-6 h-6 text-[#FFD166]/80 animate-bounce" />
             </div>
-            <p className="text-center text-xs text-[#FFD166]/70 drop-shadow-[0_0_8px_rgba(255,200,60,0.6)]">
-              © 2025 Solar Music Group All rights reserved.
-            </p>
           </div>
         </div>
       </div>
@@ -166,85 +132,52 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            {/* Song 1 */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Release 1 - YouTube Embed */}
             <div
               className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#FFD166]/20 rounded-xl overflow-hidden hover:border-[#FFD166]/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,200,60,0.3)] ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="aspect-square bg-gradient-to-br from-orange-500/20 to-blue-500/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-[#FFD166]/10 backdrop-blur-sm border-2 border-[#FFD166]/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#FFD166]/20 transition-all duration-300 cursor-pointer">
-                    <Play className="w-10 h-10 text-[#FFD166] fill-[#FFD166]" />
-                  </div>
-                </div>
+              <div className="aspect-video bg-black relative overflow-hidden">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-[#FFD166] mb-2 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-[#FFD166] mb-1 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
                   Midnight Dreams
                 </h3>
-                <p className="text-[#FFE29A]/80 mb-4">by Luna Eclipse</p>
-                <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-                  A mesmerizing blend of electronic beats and ethereal vocals that transports you to another dimension.
-                </p>
-                <div className="flex gap-3">
-                  <a
-                    href="#"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#FFD166]/10 hover:bg-[#FFD166]/20 border border-[#FFD166]/30 hover:border-[#FFD166]/60 text-[#FFD166] rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,60,0.4)]"
-                  >
-                    <Play className="w-4 h-4" />
-                    Listen Now
-                  </a>
-                  <a
-                    href="#"
-                    className="flex items-center justify-center px-4 py-2.5 bg-[#FFD166]/10 hover:bg-[#FFD166]/20 border border-[#FFD166]/30 hover:border-[#FFD166]/60 text-[#FFD166] rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,60,0.4)]"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
+                <p className="text-[#FFE29A]/80 text-sm">by Luna Eclipse</p>
               </div>
             </div>
 
-            {/* Song 2 */}
+            {/* Release 2 - Spotify Embed */}
             <div
               className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#FFD166]/20 rounded-xl overflow-hidden hover:border-[#FFD166]/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,200,60,0.3)] ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: '150ms' }}
             >
-              <div className="aspect-square bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-[#FFD166]/10 backdrop-blur-sm border-2 border-[#FFD166]/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#FFD166]/20 transition-all duration-300 cursor-pointer">
-                    <Play className="w-10 h-10 text-[#FFD166] fill-[#FFD166]" />
-                  </div>
-                </div>
+              <div className="aspect-video bg-black relative overflow-hidden flex items-center justify-center">
+                <iframe
+                  className="w-full h-full"
+                  src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-[#FFD166] mb-2 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-[#FFD166] mb-1 drop-shadow-[0_0_10px_rgba(255,200,60,0.5)]">
                   City Lights
                 </h3>
-                <p className="text-[#FFE29A]/80 mb-4">by Neon Wave</p>
-                <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-                  An upbeat synth-pop anthem capturing the energy and excitement of urban nightlife.
-                </p>
-                <div className="flex gap-3">
-                  <a
-                    href="#"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#FFD166]/10 hover:bg-[#FFD166]/20 border border-[#FFD166]/30 hover:border-[#FFD166]/60 text-[#FFD166] rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,60,0.4)]"
-                  >
-                    <Play className="w-4 h-4" />
-                    Listen Now
-                  </a>
-                  <a
-                    href="#"
-                    className="flex items-center justify-center px-4 py-2.5 bg-[#FFD166]/10 hover:bg-[#FFD166]/20 border border-[#FFD166]/30 hover:border-[#FFD166]/60 text-[#FFD166] rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,60,0.4)]"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
+                <p className="text-[#FFE29A]/80 text-sm">by Neon Wave</p>
               </div>
             </div>
           </div>
